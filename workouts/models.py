@@ -15,7 +15,7 @@ class Wod(models.Model):
     duration = models.IntegerField(default=0)
 
     def __str__(self):
-        return "{}".format(self.wod_date)
+        return "WOD {}".format(self.wod_date)
 
 
 class WodExercise(models.Model):

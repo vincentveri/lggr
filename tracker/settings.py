@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-u-8-)@2%xr3!y9e($vei8b(flda!#4uc1-kqh^hbtck*l1b14(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lggr.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'lggr.herokuapp.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'workouts.apps.WorkoutsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,8 +76,14 @@ WSGI_APPLICATION = 'tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'lggr',
+        'USER': 'root',
+        'PASSWORD': 'a21d5863ab39d00beb73326d0ccba342533efb24fbebffa9',
+        'HOST': 'localhost',
+        'OPTIONS': {
+           'init_command': 'SET default_storage_engine=INNODB',
+        }
     }
 }
 

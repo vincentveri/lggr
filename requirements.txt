@@ -8,3 +8,4 @@ wheel==0.36.2
 django-gunicorn
 dj-database-url
 psycopg2-binary
+django-heroku

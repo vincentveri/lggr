@@ -6,3 +6,5 @@ setuptools==56.0.0
 sqlparse==0.4.1
 wheel==0.36.2
 django-gunicorn
+dj-database-url
+psycopg2-binary
